@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BookDetailView: View {
     var body: some View {
-        let movie = Movie()
+        let movie = Book()
         Image("image")
             .resizable()
             .frame(width: 250, height: 350)
