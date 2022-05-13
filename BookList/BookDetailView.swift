@@ -4,27 +4,46 @@
 //
 //  Created by Fernando Borges on 11/05/22.
 //
-
 import SwiftUI
 
 struct BookDetailView: View {
+
+    @State var showCartView = false
+
     var body: some View {
-        let movie = Book()
-        Image("image")
-            .resizable()
-            .frame(width: 250, height: 350)
-            .aspectRatio(contentMode: .fit)
-            .cornerRadius(10)
-            .padding(.vertical, 10)
-        Text(movie.author)
-            .foregroundColor(.gray)
-            .multilineTextAlignment(.center)
-        Text(movie.title)
-            .bold()
-            .font(.title2)
-            .padding(.bottom)
-        Text(movie.description)
-            .foregroundColor(.gray)
+        NavigationView {
+            HStack{
+                Spacer(minLength: 16)
+                VStack(spacing: 20.0){
+                    BookInfo()
+                    HStack{
+                        BookDetailLabel(text: "Fantasy")
+                        BookDetailLabel(text: "Action")
+                        BookDetailLabel(text: "Novel")
+                    }
+                    Divider()
+                    BuyButtonView(text: "Buy for $19.99", buttonColor: Color.black)
+                }
+                Spacer(minLength: 16)
+            }
+            .sheet(isPresented: $showCartView, content: {
+                CartView(showModal: $showCartView)
+            })
+            .navigationTitle("Detail")
+            .toolbar {
+                Button("🛒") {
+                    self.showCartView = true
+                }
+            }
+        }
+    }
+}
+
+struct BookDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        BookDetailView()
+            .preferredColorScheme(.light)
+            .previewDevice("iPhone 12 Pro Max")
     }
 }
 

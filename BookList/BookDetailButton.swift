@@ -1,8 +1,8 @@
 //
-//  BookDetailChip.swift
+//  BookDetailButton.swift
 //  BookList
 //
-//  Created by Fernando Borges on 11/05/22.
+//  Created by Fernando Borges on 13/05/22.
 //
 
 import SwiftUI
@@ -19,11 +19,5 @@ struct BookDetailLabel: View {
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(Color.gray, lineWidth: 1)
             )
-    }
-}
-
-struct BookDetailLabelView_Previews: PreviewProvider {
-    static var previews: some View {
-        BookDetailLabel(text: "Fantasy")
     }
 }
