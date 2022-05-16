@@ -48,6 +48,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E962ADB2832998300A5333A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8EF5BE80282D726F00C4BADA /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E962ADC2832999D00A5333A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E850858282EAB850090C62B /* BuyButton.swift */,
+				8E85085C282EABDE0090C62B /* CartView.swift */,
+				8EF5BE7E282CAF2B00C4BADA /* BookDetailView.swift */,
+				8E85085A282EABB60090C62B /* CarTotalCellView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E962ADD28329A6C00A5333A /* Mock Data */ = {
+			isa = PBXGroup;
+			children = (
+				8E850856282EAA7F0090C62B /* BookCartCell.swift */,
+				8E850860282EB3A20090C62B /* BookInfo.swift */,
+			);
+			name = "Mock Data";
+			sourceTree = "<group>";
+		};
 		8EF5BE5A282C6C0100C4BADA = {
 			isa = PBXGroup;
 			children = (
@@ -69,14 +97,10 @@
 			children = (
 				8EF5BE66282C6C0100C4BADA /* BookListApp.swift */,
 				8EF5BE68282C6C0100C4BADA /* ContentView.swift */,
-				8EF5BE7E282CAF2B00C4BADA /* BookDetailView.swift */,
-				8E850856282EAA7F0090C62B /* BookCartCell.swift */,
-				8E85085A282EABB60090C62B /* CarTotalCellView.swift */,
-				8E850858282EAB850090C62B /* BuyButton.swift */,
-				8E85085C282EABDE0090C62B /* CartView.swift */,
+				8E962ADC2832999D00A5333A /* Views */,
+				8E962ADB2832998300A5333A /* Model */,
+				8E962ADD28329A6C00A5333A /* Mock Data */,
 				8E85085E282EADBD0090C62B /* BookDetailButton.swift */,
-				8EF5BE80282D726F00C4BADA /* Book.swift */,
-				8E850860282EB3A20090C62B /* BookInfo.swift */,
 				8EF5BE6A282C6C0300C4BADA /* Assets.xcassets */,
 				8EF5BE6C282C6C0300C4BADA /* Preview Content */,
 			);
